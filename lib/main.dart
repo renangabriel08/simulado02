@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         '/login' :(context) => const Login(),
         '/cadastro' :(context) => const Cadastro(),
       },
-      initialRoute: '/login',
+      initialRoute: '/home',
     );
   }
 }
