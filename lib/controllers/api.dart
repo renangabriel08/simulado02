@@ -31,4 +31,26 @@ class Api {
       MyToast.gerarToast('Erro ao logar');
     }
   }
+
+  static cadastrar(String nome, String email, String senha, context) async {
+    try {
+      final url = Uri.parse('https://fredaugusto.com.br/simuladodrs/users');
+
+      final req = http.MultipartRequest('POST', url);
+      req.fields['nome_user'] = nome;
+      req.fields['email_user'] = email;
+      req.fields['senha_user'] = senha;
+
+      final res = await req.send();
+
+      if (res.statusCode == 200) {
+        MyToast.gerarToast('Usuário cadastrado com sucesso');
+        Navigator.pushNamed(context, '/login');
+      } else {
+        MyToast.gerarToast('Erro ao cadastrar');
+      }
+    } catch (e) {
+      MyToast.gerarToast('Erro ao cadastrar');
+    }
+  }
 }
