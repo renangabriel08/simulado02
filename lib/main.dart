@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/splash' :(context) => const Splash(),
-        '/home' :(context) => const Home(),
-        '/login' :(context) => const Login(),
-        '/cadastro' :(context) => const Cadastro(),
+        '/splash': (context) => const Splash(),
+        '/home': (context) => const Home(),
+        '/login': (context) => const Login(),
+        '/cadastro': (context) => const Cadastro(),
       },
-      initialRoute: '/home',
+      initialRoute: '/splash',
     );
   }
 }

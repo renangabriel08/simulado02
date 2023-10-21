@@ -63,6 +63,7 @@ class Mapa extends StatelessWidget {
                       zoomGesturesEnabled: false,
                       initialCameraPosition: CameraPosition(
                         target: LatLng(-12.976390858297673, -38.48058858492815),
+                        zoom: 11,
                       ),
                     ),
                   ),
